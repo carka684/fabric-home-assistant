@@ -184,7 +184,7 @@ def setup_openzwave_novenv():
     with cd("/srv/homeassistant/src"):
         sudo("git clone https://github.com/OpenZWave/python-openzwave.git", user="homeassistant")
         with cd("python-openzwave"):
-            sudo("git checkout python3", user="homeassistant")
+            sudo("git checkout -b python3", user="homeassistant")
             sudo("make build", user="homeassistant")
             sudo("make install", user="homeassistant")
 
